@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    // "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@models/*": ["src/models/*"],
+      "@server": ["src/server"],
+      "@routes/*": ["src/routes/*"],
+      "@utils/*": ["src/utils/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@validators/*": ["src/validators/*"],
+      "@Custom_message": ["src/Custom_message/index"]
+    },
+    "useUnknownInCatchVariables": false
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "src/routes/app/user",
+    "src/routes/app/delivery_company",
+    "src/routes/app/renter_company"
+  ],
+"exclude": ["node_modules", "dist", "tests"]
+}
