@@ -57,7 +57,7 @@ const SERVICES = {
     class: "http://localhost:4002",
     subject: "http://localhost:4003",
 };
-fastify.get('/', (req, reply) => {
+fastify.get('/', (req: any, reply: any) => {
     reply.send({ message: "Hello", code: 200 });
 })
 
@@ -66,7 +66,7 @@ fastify.register(fastifyHttpProxy, {
     upstream: SERVICES.auth,
     prefix: "/user", // All /auth requests go to the auth service
     replyOptions: {
-        rewriteRequestHeaders: (req: any, headers) => {
+        rewriteRequestHeaders: (req: any, headers: any) => {
             return {
                 ...headers,
                 'x-user-id': req.user,
@@ -81,7 +81,7 @@ fastify.register(fastifyHttpProxy, {
     upstream: SERVICES.class,
     prefix: "/class", // All /orders requests go to the orders service
     replyOptions: {
-        rewriteRequestHeaders: (req: any, headers) => {
+        rewriteRequestHeaders: (req: any, headers: any) => {
             return {
                 ...headers,
                 'x-user-id': req.user,
@@ -96,7 +96,7 @@ fastify.register(fastifyHttpProxy, {
     upstream: SERVICES.subject,
     prefix: "/subject", // All /products requests go to the products service
     replyOptions: {
-        rewriteRequestHeaders: (req: any, headers) => {
+        rewriteRequestHeaders: (req: any, headers: any) => {
             return {
                 ...headers,
                 'x-user-id': req.user,
