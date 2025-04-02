@@ -55,7 +55,7 @@ fastify.setErrorHandler((error: FastifyError, request: any, reply: any) => {
 const SERVICES = {
     auth: "https://user-auth-microservice-using-fastify.onrender.com",
     class: "https://class-microservice-using-fastify.onrender.com",
-    subject: "http://localhost:4003",
+    subject: "https://subject-microservices-using-fastify.onrender.com",
 };
 fastify.get('/', (req: any, reply: any) => {
     reply.send({ message: "Hello", code: 200 });
