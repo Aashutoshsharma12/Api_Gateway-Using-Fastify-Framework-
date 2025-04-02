@@ -54,7 +54,7 @@ fastify.setErrorHandler((error: FastifyError, request: any, reply: any) => {
 // Service URLs
 const SERVICES = {
     auth: "https://user-auth-microservice-using-fastify.onrender.com",
-    class: "http://localhost:4002",
+    class: "https://class-microservice-using-fastify.onrender.com",
     subject: "http://localhost:4003",
 };
 fastify.get('/', (req: any, reply: any) => {

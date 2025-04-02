@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "ts-node src/index.ts --env development",
     "prod": "ts-node src/index.ts --env production",
-    "build:dev": "npm run remove-previous-build && tsc --build tsconfig.prod.json && tsc-alias -p tsconfig.prod.json && npm run copy-pre-start && npm run copy-public",
-    "build:prod": "tsc --build tsconfig.prod.json && tsc-alias -p tsconfig.prod.json && npm run copy-public && npm run copy-pre-start",
+    "build:dev": "npm run remove-previous-build && tsc --build tsconfig.prod.json && tsc-alias -p tsconfig.prod.json",
+    "build:prod": "tsc --build tsconfig.prod.json && tsc-alias -p tsconfig.prod.json",
     "remove-previous-build": "rm -rf dist/",
     "copy-public": "cp -r src/public dist/public",
     "copy-pre-start": "cp -r src/pre-start/env dist/pre-start/env",
